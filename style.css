@@ -281,29 +281,29 @@ body {
     gap: 8px;
 }
 
-/* Rodapé */
 /* RODAPÉ */
 .footer {
     background-color: #2E8B57;
     padding: 20px;
     text-align: center;
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px; /* Reduzi o gap para melhor espaçamento */
     margin-bottom: 15px;
+    flex-wrap: wrap; /* Garante responsividade */
 }
 
 .social-icon {
-    /* REMOVE SUBLINHADO E RESETA ESTILOS DE LINK */
     text-decoration: none !important;
     color: white;
     background-color: rgba(255, 255, 255, 0.2);
-    width: 40px;
-    height: 40px;
+    width: 38px; /* Tamanho ligeiramente menor */
+    height: 38px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -313,18 +313,28 @@ body {
 
 .social-icon:hover {
     background-color: #FF7A00;
-    transform: translateY(-3px);
-    text-decoration: none !important; /* GARANTE QUE NÃO APARECERÁ SUBLINHADO */
+    transform: translateY(-3px) scale(1.1);
 }
 
 .social-icon i {
-    font-size: 18px;
+    font-size: 16px; /* Tamanho proporcional */
 }
 
 .footer p {
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 10px;
     opacity: 0.9;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 480px) {
+    .social-links {
+        gap: 12px;
+    }
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
 }
 
 /* Responsivo */
